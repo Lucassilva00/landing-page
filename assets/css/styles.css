@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 10rem;
     text-transform: uppercase;
 }
 
@@ -62,6 +62,7 @@ h6 {
 
 p{
     margin-bottom: 3rem;
+    font-size: 3rem;
 }
 
 .main-bg {
@@ -79,7 +80,7 @@ p{
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 10rem var(--gap);
 }
 
 .section {
@@ -106,7 +107,7 @@ p{
 }
 
 .menu h1{
-    font-size: 2.3rem;
+    font-size: 4.3rem;
     color: var(--primary-color);
 }
 
@@ -122,7 +123,7 @@ p{
 .menu ul li a{
     display: block;
     padding: 2rem;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     color: var(--primary-color);
     position: relative;
 }
@@ -153,7 +154,7 @@ p{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content, .intro-img-content {
@@ -165,14 +166,54 @@ p{
 
 .intro-img-content img {
     width: 100%;
-    height: auto;
+    height: auto;   
 }
 
 .top3-content {
     max-width: 80rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     height: 100vh;
     text-align: center;
+}
+
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.grid-main-heading{
+    margin-bottom: 1rem;
+}
+
+.grid-description{
+    padding-bottom: 12rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
 }
