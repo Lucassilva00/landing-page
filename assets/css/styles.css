@@ -208,10 +208,10 @@ p{
     font-size: 3.5rem;
     text-transform: none;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--white-color);
 }
 
-.bt-socials a:hover{
+.socials a:hover{
     transition: all 200ms ease-in-out;
     color: goldenrod;
 }
@@ -334,7 +334,7 @@ p{
 
 .gallery-img img{
     transition: all 300ms ease-in-out;
-    background-color: #0a1128;
+    background-color: var(--white-color);
 }
 
 .gallery-img img:hover{
@@ -346,6 +346,11 @@ p{
     font-size: 4.7rem;
 }
 
+.main-content-contato {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 3rem var(--gap);
+}
 
 .email ul {
     display: grid;
@@ -404,7 +409,7 @@ p{
     display: block;
     padding: 1rem;
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--white-color);
     position: relative;
 }
 
